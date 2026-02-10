@@ -51,7 +51,28 @@ def test_when_extra_spaces_in_rules():
     df_result = add_virtual_column(df, " label_one + label_two ","label_three")
     assert df_result.equals(df_expected), f"Should work when the role have extra spaces in the start/end.\n\nResult:\n\n{df_result}\n\nExpected:\n\n{df_expected}"
 
+
 if __name__ == "__main__":
+    # Test 1: add
+    df1 = pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6]})
+    print(add_virtual_column(df1, "a + b", "sum"))
+
+    # Test 2: subtraction
+    df2 = pd.DataFrame({"revenue": [100, 200], "cost": [30, 50]})
+    print(add_virtual_column(df2, "revenue - cost", "profit"))
+
+    # Test 3: Complex expression
+    df3 = pd.DataFrame({"x": [10, 20], "y": [5, 10], "z": [2, 3]})
+    print(add_virtual_column(df3, "x * y + z", "result"))
+
+    # Test 4: Error - non-existent column
+    df4 = pd.DataFrame({"a": [1, 2]})
+    print(add_virtual_column(df4, "a + b", "c"))  # pusty DataFrame
+
+    # Test 5: Error - invalid name
+    df5 = pd.DataFrame({"a": [1, 2]})
+    print(add_virtual_column(df5, "a + a", "new-column"))  # pusty DataFrame
+
     test_sum_of_two_columns()
     test_multiplication_of_two_columns()
     test_subtraction_of_two_columns()
@@ -59,4 +80,5 @@ if __name__ == "__main__":
     test_empty_result_when_invalid_rules()
     test_when_extra_spaces_in_rules()
     print("All tests passed!")
+
 
