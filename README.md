@@ -1,6 +1,6 @@
 # Recruitment Task for Cloudfide- Virtual Column Generator
 
-Validation Rules
+## Validation Rules
 
 Column names: letters and underscores only (a-z, A-Z, _)
 
@@ -8,11 +8,11 @@ Supported operations: +, -, *
 
 Returns empty DataFrame on validation failure
 
-Run Tests
+## Run Tests
 
 python tests.py
 
-Project Structure
+## Project Structure
 
 ├── solution.py    # Main implementation
 
