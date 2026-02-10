@@ -9,6 +9,7 @@ Run Tests
 python tests.py
 
 Project Structure
+
 ├── solution.py    # Main implementation
 
 ├── tests.py       # Unit tests
