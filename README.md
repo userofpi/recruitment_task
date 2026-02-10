@@ -1,4 +1,4 @@
-Recruitment Task for Cloudfide- Virtual Column Generator
+##Recruitment Task for Cloudfide- Virtual Column Generator
 
 Validation Rules
 
@@ -9,6 +9,7 @@ Supported operations: +, -, *
 Returns empty DataFrame on validation failure
 
 Run Tests
+
 python tests.py
 
 Project Structure
